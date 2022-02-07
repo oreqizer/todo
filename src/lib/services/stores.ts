@@ -1,3 +1,5 @@
 import { writable } from "svelte/store";
 
-export const todos = writable([]);
+import type Todo from "$lib/records/Todo";
+
+export const todos = writable<Todo[]>([]);

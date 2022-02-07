@@ -12,7 +12,7 @@
     }
 
     const todo = {
-      id: Math.round(Math.random() * 1_000_000_000),
+      id: Math.round(Math.random() * 1_000_000_000), // 😹
       text,
       done: false,
     };
