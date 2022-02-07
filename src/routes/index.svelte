@@ -1,5 +1,5 @@
 <script>
-  import Todos from "../scenes/Todos.svelte";
+  import Todos from "$lib/scenes/Todos/index.svelte";
 </script>
 
 <Todos />

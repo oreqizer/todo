@@ -1,14 +1,16 @@
 <script lang="ts">
   import { onMount } from "svelte";
 
-  import Input from "../components/Input.svelte";
-  import { todos } from "../services/stores";
+  import InputForm from "$lib/scenes/Todos/components/InputForm.svelte";
+  import { todos } from "$lib/services/stores";
 
   const TODOS_KEY = "todos";
 
   let list = [];
 
   onMount(() => {
+    localStorage.removeItem(TODOS_KEY); // TODO remove
+
     const loaded = localStorage.getItem(TODOS_KEY);
     if (loaded != null) {
       todos.set(JSON.parse(loaded));
@@ -23,10 +25,10 @@
 </script>
 
 <section class="bg-neutral-50 shadow-lg">
-  <Input />
+  <InputForm />
 
   {#each list as todo}
-    <div>{todo}</div>
+    <div>{todo.id}: {todo.text}, {todo.done ? "Done" : "Not"}</div>
   {/each}
 
   <div class="footer relative px-4 py-3">asd</div>
