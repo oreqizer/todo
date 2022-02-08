@@ -27,6 +27,7 @@
   }
 
   $: list = filterTodos(hash, listAll);
+  $: doneAll = listAll.filter((todo) => !todo.done).length === 0;
 
   onMount(() => {
     const loaded = localStorage.getItem(TODOS_KEY);
@@ -48,10 +49,22 @@
       hash = window.location.hash;
     });
   });
+
+  function handleArrow() {
+    todos.update((state) => state.map((todo) => ({ ...todo, done: !doneAll })));
+  }
+
+  $: arrowColor = doneAll ? "text-neutral-700" : "text-neutral-500";
 </script>
 
 <section class="bg-neutral-50 shadow-lg">
-  <InputForm />
+  <div class="relative w-full">
+    <button on:click={handleArrow} class="absolute left-4 top-4 text-xl rotate-90 {arrowColor}"
+      >➔
+    </button>
+
+    <InputForm />
+  </div>
 
   {#if list.length > 0}
     <ul>
