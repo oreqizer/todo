@@ -19,5 +19,5 @@ module.exports = {
   },
   rules: {
     "no-undef": "off", // doesn't like TypeScript
-  }
+  },
 };

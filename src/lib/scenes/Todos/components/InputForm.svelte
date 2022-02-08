@@ -1,5 +1,4 @@
 <script lang="ts">
-  import Input from "$lib/components/Input.svelte";
   import { todos } from "$lib/services/stores";
 
   let text = "";
@@ -17,15 +16,16 @@
       done: false,
     };
 
-    todos.update((state) => [todo, ...state]);
+    todos.update((state) => [...state, todo]);
 
     text = "";
   }
 </script>
 
 <form on:submit={handleSubmit}>
-  <Input
-    classname="shadow-[inset_0_-2px_1px_rgba(0,0,0,0.07)]"
+  <input
+    class="input-todo pl-14 shadow-[inset_0_-2px_1px_rgba(0,0,0,0.07)]"
+    type="text"
     bind:value={text}
     placeholder="What needs to be done?"
   />
