@@ -59,9 +59,11 @@
 
 <section class="bg-neutral-50 shadow-lg">
   <div class="relative w-full">
-    <button on:click={handleArrow} class="absolute left-4 top-4 text-xl rotate-90 {arrowColor}"
-      >➔
-    </button>
+    {#if listAll.length > 0}
+      <button on:click={handleArrow} class="absolute left-4 top-4 text-xl rotate-90 {arrowColor}"
+        >➔
+      </button>
+    {/if}
 
     <InputForm />
   </div>
