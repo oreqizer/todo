@@ -1,0 +1,4 @@
+{
+  "*.{js,ts,tsx}": ["prettier --ignore-path .gitignore --check --plugin-search-dir=. ", "eslint --ignore-path .gitignore"],
+  "*.{json,yml,md}": ["prettier --write"]
+}
