@@ -33,13 +33,16 @@
     });
   });
 
-  $: classesAll = filter === null ? "border-primary" : "border-transparent";
-  $: classesActive = filter === Filter.ACTIVE ? "border-primary" : "border-transparent";
-  $: classesCompleted = filter === Filter.COMPLETED ? "border-primary" : "border-transparent";
+  $: classesAll =
+    filter === null ? "border-primary dark:border-primary-light" : "border-transparent";
+  $: classesActive =
+    filter === Filter.ACTIVE ? "border-primary dark:border-primary-light" : "border-transparent";
+  $: classesCompleted =
+    filter === Filter.COMPLETED ? "border-primary dark:border-primary-light" : "border-transparent";
 </script>
 
 <div
-  class="footer relative flex justify-between items-center w-full text-neutral-500 dark:text-neutral-400 font-light px-4 py-2"
+  class="footer relative flex justify-between items-center w-full px-4 py-2 text-neutral-500 dark:text-neutral-400 font-light shadow-[inset_0_2px_1px_rgba(0,0,0,0.07)] dark:shadow-[inset_0_2px_1px_rgba(255,255,255,0.1)]"
 >
   <div class="flex-1 relative text-left">
     {#if undone.length === 1}1 item left{:else}{undone.length} items left{/if}
@@ -86,7 +89,7 @@
   @media (prefers-color-scheme: dark) {
     .footer:before {
       box-shadow: 0 1px 1px rgb(0 0 0 / 20%), 0 8px 0 -3px #171717, 0 9px 1px -3px rgb(0 0 0 / 20%),
-      0 16px 0 -6px #171717, 0 17px 2px -6px rgb(0 0 0 / 20%);
+        0 16px 0 -6px #171717, 0 17px 2px -6px rgb(0 0 0 / 20%);
     }
   }
 </style>

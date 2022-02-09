@@ -61,7 +61,7 @@
     state === State.EDITING ? "outline-1 outline-neutral-300 dark:outline-neutral-600" : "";
 </script>
 
-<li class="relative flex items-center shadow font-light group border-b border-neutral-200 dark:border-neutral-700">
+<li class="relative flex items-center font-light group border-b last-of-type:border-0 border-neutral-200 dark:border-neutral-700">
   {#if state !== State.EDITING}
     <button
       class="absolute flex h-full top-0 left-3 items-center text-center"
@@ -90,7 +90,7 @@
       class="hidden group-hover:block absolute flex h-full top-0 right-5 items-center text-center"
       on:click={handleRemove}
     >
-      <span class="text-m text-primary transition-opacity opacity-50 hover:opacity-100">╳</span>
+      <span class="text-m text-primary dark:text-primary-light transition-opacity opacity-50 hover:opacity-100">╳</span>
     </button>
   {/if}
 </li>
