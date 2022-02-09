@@ -4,6 +4,8 @@ A local-first TODO app. :scroll: Has dark mode!
 
 ![Sneakpeek](docs/sneakpeek.png)
 
+Visit at https://todo.oreqizer.com/
+
 ## Stack
 
 Built using [Svelte Kit](https://kit.svelte.com) and [Tailwind](https://tailwindcss.com) to get a
