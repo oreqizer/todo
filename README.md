@@ -1,6 +1,8 @@
 # todo
 
-A local-first TODO app. :scroll:
+A local-first TODO app. :scroll: Has dark mode!
+
+![Sneakpeek](docs/sneakpeek.png)
 
 ## Stack
 
