@@ -1,5 +1,5 @@
 <script>
-  import Title from "$lib/components/title.svelte";
+  import Title from "$lib/components/Title.svelte";
   import Footer from "$lib/components/Footer.svelte";
   import "../app.css";
 </script>
