@@ -24,7 +24,7 @@
 
 <form on:submit={handleSubmit}>
   <input
-    class="input-todo pl-14 shadow-[inset_0_-2px_1px_rgba(0,0,0,0.07)]"
+    class="input-todo pl-14 shadow-[inset_0_-2px_1px_rgba(0,0,0,0.07)] dark:shadow-[inset_0_-2px_1px_rgba(255,255,255,0.1)]"
     type="text"
     bind:value={text}
     placeholder="What needs to be done?"

@@ -4,8 +4,8 @@
   import "../app.css";
 </script>
 
-<main class="bg-neutral-100 h-screen py-4">
-  <div class="min-w-[230px] max-w-[550px] mx-auto">
+<main class="bg-neutral-100 dark:bg-neutral-800 h-screen py-4">
+  <div class="min-w-[320px] max-w-[570px] mx-auto px-2">
     <Title />
 
     <slot />

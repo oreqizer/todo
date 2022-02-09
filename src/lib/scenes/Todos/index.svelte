@@ -54,10 +54,12 @@
     todos.update((state) => state.map((todo) => ({ ...todo, done: !doneAll })));
   }
 
-  $: arrowColor = doneAll ? "text-neutral-700" : "text-neutral-500";
+  $: arrowColor = doneAll
+    ? "text-neutral-700 dark:text-neutral-200"
+    : "text-neutral-500 dark:text-neutral-400";
 </script>
 
-<section class="bg-neutral-50 shadow-lg">
+<section class="bg-neutral-50 dark:bg-neutral-900 shadow-lg">
   <div class="relative w-full">
     {#if listAll.length > 0}
       <button on:click={handleArrow} class="absolute left-4 top-4 text-xl rotate-90 {arrowColor}"

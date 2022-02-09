@@ -52,15 +52,16 @@
 
   $: showDone = state !== State.EDITING && todo?.done;
 
-  $: doneColor = showDone ? "border-emerald-300" : "border-neutral-500";
-  $: textColor = showDone ? "text-neutral-300" : "text-neutral-500";
+  $: doneColor = showDone ? "border-emerald-300" : "border-neutral-500 dark:border-neutral-400";
+  $: textColor = showDone
+    ? "text-neutral-300 dark:text-neutral-600"
+    : "text-neutral-500 dark:text-neutral-400";
   $: textCross = showDone ? "line-through" : "";
-  $: inputOutline = state === State.EDITING ? "outline-1 outline-neutral-300" : "";
+  $: inputOutline =
+    state === State.EDITING ? "outline-1 outline-neutral-300 dark:outline-neutral-600" : "";
 </script>
 
-<li
-  class="relative flex items-center shadow font-light text-neutral-700 group border-b last-of-type:border-b-0"
->
+<li class="relative flex items-center shadow font-light group border-b border-neutral-200 dark:border-neutral-700">
   {#if state !== State.EDITING}
     <button
       class="absolute flex h-full top-0 left-3 items-center text-center"

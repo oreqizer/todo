@@ -39,7 +39,7 @@
 </script>
 
 <div
-  class="footer relative flex justify-between items-center w-full text-neutral-500 font-light px-4 py-2"
+  class="footer relative flex justify-between items-center w-full text-neutral-500 dark:text-neutral-400 font-light px-4 py-2"
 >
   <div class="flex-1 relative text-left">
     {#if undone.length === 1}1 item left{:else}{undone.length} items left{/if}
@@ -81,5 +81,12 @@
     overflow: hidden;
     box-shadow: 0 1px 1px rgb(0 0 0 / 20%), 0 8px 0 -3px #f6f6f6, 0 9px 1px -3px rgb(0 0 0 / 20%),
       0 16px 0 -6px #f6f6f6, 0 17px 2px -6px rgb(0 0 0 / 20%);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .footer:before {
+      box-shadow: 0 1px 1px rgb(0 0 0 / 20%), 0 8px 0 -3px #171717, 0 9px 1px -3px rgb(0 0 0 / 20%),
+      0 16px 0 -6px #171717, 0 17px 2px -6px rgb(0 0 0 / 20%);
+    }
   }
 </style>
